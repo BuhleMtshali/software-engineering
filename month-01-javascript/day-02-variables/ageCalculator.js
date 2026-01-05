@@ -27,6 +27,7 @@ while(calculateAgain.toLowerCase() === "yes"){
         age--; //BIRTHDAY HASNT HAPPENED
     }
 
+    console.log(`Hello ${name}, you are currently ${age} years, ${monthsDiff} days and ${dayDiff} days old! `)
    
     calculateAgain = prompt("Do you want to calculate again: ");
 }
