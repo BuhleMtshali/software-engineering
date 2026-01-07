@@ -12,7 +12,13 @@ function fizzBuzz(){
     for(let i = 0; i <= maxIterator; i++){
         if(i % 3 === 0 || i % 5 === 0){
             console.log("🎊FizzBuzz!!!!🎰")
-        } else if()
+        } else if(i % 3){
+            console.log("🧩Fizz!!")
+        } else if(i % 5 === 0){
+            console.log("🐝Buzz!!!")
+        } else{
+            console.log(`🗑️Ooops ${i} bites the dust‼️`)
+        }
     }
     
 }
