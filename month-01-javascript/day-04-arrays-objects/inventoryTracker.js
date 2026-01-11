@@ -19,7 +19,11 @@ while(reRun.toLowerCase() === "yes"){
             if(inventoryArray){
                 console.log("====== 🎮 Inventory List 🛍️ ======");
                 inventoryArray.forEach((item, index) => {
-                    console.log(`🎰 Item ${index}: ${item.name}, Quantity: ${item.quantity}, Price Each: R${item.price}`)
+                    console.log(`🐝 Item Number: ${index}`)
+                    console.log(`🎲 Item Name: ${item.name}`)
+                    console.log(`🎮 Item Quantity: ${item.quantity}`)
+                    console.log(`👾 Item Price: R${item.price}`)
+                    console.log("============== ‼️ ======================")
                 })
             }
             break;
