@@ -46,7 +46,13 @@ while(reRun.toLowerCase() === "yes"){
             }
 
             inventoryArray.push(product)
-            console.log(inventoryArray)
+            console.log(`✅ You have successfuly Added ${itemName} to inventory 📦`)
+
+        //END OF CASE 2
+        
+        case "3":
+            let removeItem = prompt("⛳️ Enter the name of the item you want to remove: ");
+
 
         //DEFAULT CASE
         default:
