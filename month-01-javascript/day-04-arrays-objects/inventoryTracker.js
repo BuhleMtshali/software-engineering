@@ -6,11 +6,12 @@ let reRun = "yes";
 
 //STARTING THE MAIN WHILE LOOP
 while(reRun.toLowerCase() === "yes"){
-    console.log("1. Add an Item to Inventory 📦")
-    console.log("2. View Inventory 📋")
+    console.log("1. View Inventory 📋")
+    console.log("2. Add an Item to Inventory 📦")
     console.log("3. Remove an Item from Inventory 🎲")
     console.log("4. Search for Item 🔎")
     console.log("5. Exit ‼️")
+    let option = prompt("Choose an option to start👾: ")
 
 
     //CLOSING THE LOOP
