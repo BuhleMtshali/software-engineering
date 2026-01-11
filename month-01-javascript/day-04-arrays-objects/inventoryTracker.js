@@ -39,7 +39,6 @@ while(reRun.toLowerCase() === "yes"){
             let totalPrice = itemQuantity * itemPrice;
 
             let product = {
-                itemIndex: index,
                 productName: itemName,
                 productQuantity: itemQuantity,
                 productPrice: itemPrice,
@@ -48,7 +47,7 @@ while(reRun.toLowerCase() === "yes"){
 
             inventoryArray.push(product)
             console.log(`✅ You have successfuly Added ${itemName} to inventory 📦`)
-
+            break;
         //END OF CASE 2
         
         case "3":
@@ -60,7 +59,7 @@ while(reRun.toLowerCase() === "yes"){
                 inventoryArray.splice(index, 1)
                 console.log(inventoryArray)
             }
-    
+            break;
 
         //DEFAULT CASE
         default:
