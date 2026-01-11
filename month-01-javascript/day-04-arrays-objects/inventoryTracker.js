@@ -73,9 +73,15 @@ while(reRun.toLowerCase() === "yes"){
             console.log(`👾 Item Price: R${item.productPrice}`)
             console.log(`🎰 Total: ${item.productTotal}`)
             console.log("============== ‼️ ======================")
+            break;
+
+        case "5":
+            console.log("Thank you come back again😃");
+            break;
 
         //DEFAULT CASE
         default:
+            console.log("‼️ Invalid Option Selected")
             break;
     }
 
