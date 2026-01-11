@@ -55,8 +55,12 @@ while(reRun.toLowerCase() === "yes"){
             let removeItem = prompt("⛳️ Enter the name of the item you want to remove: ").toLowerCase();
 
             //REMOVING ITEM FROM THE LIST
-            let index = inventoryArray
-
+            let index = inventoryArray.findIndex(items => items.productName === removeItem);
+            if(index !== -1){
+                inventoryArray.splice(index, 1)
+                console.log(inventoryArray)
+            }
+    
 
         //DEFAULT CASE
         default:
