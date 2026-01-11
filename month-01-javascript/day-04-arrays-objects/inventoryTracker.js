@@ -17,7 +17,10 @@ while(reRun.toLowerCase() === "yes"){
     switch (option) {
         case "1":
             if(inventoryArray){
-                console.log(inventoryArray)
+                console.log("====== 🎮 Inventory List 🛍️ ======");
+                inventoryArray.forEach((item, index) => {
+                    console.log(`🎰 Item ${index}: ${item.name}, Quantity: ${item.quantity}, Price Each: R${item.price}`)
+                })
             }
             break;
     
