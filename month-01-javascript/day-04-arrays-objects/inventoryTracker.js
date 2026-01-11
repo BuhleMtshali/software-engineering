@@ -57,7 +57,7 @@ while(reRun.toLowerCase() === "yes"){
             let index = inventoryArray.findIndex(items => items.productName === removeItem);
             if(index !== -1){
                 inventoryArray.splice(index, 1)
-                console.log(`✅ Successfully Removed ${item.productName}`)
+                console.log(`✅ Successfully Removed ${removeItem.productName}`)
             } else {
                 console.log("🚫Oops Item doesn't exist‼️")
             }
@@ -67,16 +67,21 @@ while(reRun.toLowerCase() === "yes"){
         case "4":
             let findItem = prompt("🪪 Enter the name of the product you want to find: ").toLowerCase();
             let item = inventoryArray.find(item => item.productName === findItem);
-            console.log("------- ITEM FOUND ✅ ------")
-            console.log(`🎲 Item Name: ${item.productName}`)
-            console.log(`🎮 Item Quantity: ${item.productQuantity}`)
-            console.log(`👾 Item Price: R${item.productPrice}`)
-            console.log(`🎰 Total: ${item.productTotal}`)
+            if (item) {
+            console.log("------- ITEM FOUND ✅ ------");
+            console.log(`🎲 Item Name: ${item.productName}`);
+            console.log(`🎮 Item Quantity: ${item.productQuantity}`);
+            console.log(`👾 Item Price: R${item.productPrice}`);
+            console.log(`🎰 Total: ${item.productTotal}`);
             console.log("============== ‼️ ======================")
+            } else {
+            console.log("🚫 Item not found in inventory 😢");
+            }
             break;
 
         case "5":
             console.log("Thank you come back again😃");
+            reRun = "no";
             break;
 
         //DEFAULT CASE
