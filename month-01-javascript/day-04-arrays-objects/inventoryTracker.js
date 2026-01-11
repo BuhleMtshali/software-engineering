@@ -33,12 +33,13 @@ while(reRun.toLowerCase() === "yes"){
             //END OF CASE 1
 
         case "2":
-            let itemName = prompt("📦 Enter the name of the product: ");
+            let itemName = prompt("📦 Enter the name of the product: ").toLowerCase();
             let itemQuantity = parseInt(prompt("🧩 How many products do you want to add?: "));
             let itemPrice = parseFloat(prompt("🐝 How is each item (R): "));
             let totalPrice = itemQuantity * itemPrice;
 
             let product = {
+                itemIndex: index,
                 productName: itemName,
                 productQuantity: itemQuantity,
                 productPrice: itemPrice,
@@ -51,7 +52,10 @@ while(reRun.toLowerCase() === "yes"){
         //END OF CASE 2
         
         case "3":
-            let removeItem = prompt("⛳️ Enter the name of the item you want to remove: ");
+            let removeItem = prompt("⛳️ Enter the name of the item you want to remove: ").toLowerCase();
+
+            //REMOVING ITEM FROM THE LIST
+            let index = inventoryArray
 
 
         //DEFAULT CASE
@@ -60,7 +64,7 @@ while(reRun.toLowerCase() === "yes"){
     }
 
     //CLOSING THE LOOP
-    reRun = prompt("🛍️ Would you like to make to make another transaction? (yes/no): ");
+    reRun = prompt("🛍️ Would you like to make to make another transaction? (yes/no): ").toLowerCase();
 }
 
 console.log("========= ⛳️ THANK YOU FOR TRYING MY INVENTORY TRACKER 🎲 ============")
