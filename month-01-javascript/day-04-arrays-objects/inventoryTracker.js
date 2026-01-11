@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 console.log("====== 🎰 WELCOME TO MY MINI INVENTORY📦 TRACKER 🐝 ======")
-let inventoryArray = [{name: "rice", quantity: 20, price: 21}];
+let inventoryArray = [{name: "rice", quantity: 20, price: 21}, {name: "chicken", quantity: 30, price: 23}];
 let reRun = "yes";
 
 //STARTING THE MAIN WHILE LOOP
@@ -12,7 +12,7 @@ while(reRun.toLowerCase() === "yes"){
     console.log("4. Search for Item 🔎")
     console.log("5. Exit ‼️")
     let option = prompt("Choose an option to start👾: ")
-
+    
     //STARTING THE SWITCH STATEMENTS
     switch (option) {
         case "1":
@@ -25,9 +25,19 @@ while(reRun.toLowerCase() === "yes"){
                     console.log(`👾 Item Price: R${item.price}`)
                     console.log("============== ‼️ ======================")
                 })
+            } else{
+                console.log("🚫 Inventory Is currently Empty🙂‍↔️, no stress, time to add more stuff😃");
             }
             break;
-    
+            //END OF CASE 1
+
+        case "2":
+            let itemName = prompt("📦 Enter the name of the product: ");
+            let itemQuantity = parseInt(prompt("🧩 How many products do you want to add?: "));
+            let itemPrice = parseFloat(prompt("🐝 How is each item (R): "));
+            let totalPrice = itemQuantity * itemPrice;
+
+        //DEFAULT CASE
         default:
             break;
     }
