@@ -16,13 +16,14 @@ while(reRun.toLowerCase() === "yes"){
     //STARTING THE SWITCH STATEMENTS
     switch (option) {
         case "1":
-            if(inventoryArray){
+            if(inventoryArray.length > 0){
                 console.log("====== 🎮 Inventory List 🛍️ ======");
                 inventoryArray.forEach((item, index) => {
                     console.log(`🐝 Item Number: ${index}`)
-                    console.log(`🎲 Item Name: ${item.name}`)
-                    console.log(`🎮 Item Quantity: ${item.quantity}`)
-                    console.log(`👾 Item Price: R${item.price}`)
+                    console.log(`🎲 Item Name: ${item.productName}`)
+                    console.log(`🎮 Item Quantity: ${item.productQuantity}`)
+                    console.log(`👾 Item Price: R${item.productPrice}`)
+                    console.log(`🎰 Total: ${item.productTotal}`)
                     console.log("============== ‼️ ======================")
                 })
             } else{
