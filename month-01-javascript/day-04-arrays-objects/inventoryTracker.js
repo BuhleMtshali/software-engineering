@@ -1,7 +1,7 @@
 const prompt = require("prompt-sync")();
 
 console.log("====== 🎰 WELCOME TO MY MINI INVENTORY📦 TRACKER 🐝 ======")
-let inventoryArray = [{name: "rice", quantity: 20, price: 21}, {name: "chicken", quantity: 30, price: 23}];
+let inventoryArray = [];
 let reRun = "yes";
 
 //STARTING THE MAIN WHILE LOOP
@@ -36,6 +36,16 @@ while(reRun.toLowerCase() === "yes"){
             let itemQuantity = parseInt(prompt("🧩 How many products do you want to add?: "));
             let itemPrice = parseFloat(prompt("🐝 How is each item (R): "));
             let totalPrice = itemQuantity * itemPrice;
+
+            let product = {
+                productName: itemName,
+                productQuantity: itemQuantity,
+                productPrice: itemPrice,
+                productTotal: totalPrice
+            }
+
+            inventoryArray.push(product)
+            console.log(inventoryArray)
 
         //DEFAULT CASE
         default:
