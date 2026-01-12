@@ -16,6 +16,7 @@
 
 *{
     font-family: var(--primary-font);
+    margin: 0;
 }
 body{
     display: flex;
@@ -58,4 +59,20 @@ body{
 
 header{
     text-align: center;
+}
+
+header h1{
+    font-size: 3rem;
+}
+
+header small{
+    font-size: 1rem;
+    color: var(--subtle-grey);
+}
+
+header .curly-line{
+    width: 300px;
+  height: 20px;
+  border-bottom: 4px solid black;
+  border-radius: 100%;
 }
