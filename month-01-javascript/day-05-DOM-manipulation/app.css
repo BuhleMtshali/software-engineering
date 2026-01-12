@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+:root{
+    --primary-font: "Fredoka", sans-serif;
+    --black: #000000;
+    --very-light-grey: #F9FAFB;
+    --light-grey: #F3F4F6;
+    --border-grey: #D1D5DB;
+    --placeholder-grey: #9CA3AF;
+    --subtle-grey: #6B7280;
+    --btn-hover: #1F2937;
+    --white: #ffffff;
+    --box-shadow: shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+
+}
