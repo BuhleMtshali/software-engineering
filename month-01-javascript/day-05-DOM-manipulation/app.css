@@ -116,62 +116,50 @@ form input:focus{
 }
 /* CHECKBOX */
 
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.checkbox-wrapper input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
 
-.custom-checkbox input[type="checkbox"] {
-  /* Visually hide the original checkbox */
+.checkbox-wrapper *,
+  .checkbox-wrapper ::after,
+  .checkbox-wrapper ::before {
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.checkbox-wrapper .label {
+  cursor: pointer;
+}
+
+.checkbox-wrapper .check {
+  width: 50px;
+  height: 50px;
   position: absolute;
   opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
-.custom-checkbox label {
-  position: relative;
-  padding-left: 35px; /* Make space for the custom box */
-  cursor: pointer;
-  display: inline-block;
-  line-height: 25px; /* Align text vertically with the box */
+.checkbox-wrapper .label svg {
+  vertical-align: middle;
 }
 
-.custom-checkbox label::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 30px;
-  height: 30px;
-  border: 2px solid var(--border-grey);
-  background-color: #fff;
-  border-radius: 50%; /* Optional: adds rounded corners */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.checkbox-wrapper .path1 {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition: .5s stroke-dashoffset;
+  opacity: 0;
 }
 
-/* Change background when checked */
-.custom-checkbox input[type="checkbox"]:checked + label::before {
-  background-color: var(--black); /* Example blue color */
-  
+.checkbox-wrapper .check:checked + label svg g path {
+  stroke-dashoffset: 0;
+  opacity: 1;
 }
 
-/* Create the checkmark */
-.custom-checkbox label::after {
-  content: '';
-  position: absolute;
-  left: 9px; /* Adjust position for proper alignment */
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
-  display: none; /* Hide by default */
-  
-}
-
-/* Show the checkmark when checked */
-.custom-checkbox input[type="checkbox"]:checked + label::after {
-  display: block;
-  
-}
+/* END OF TICKBOX */
