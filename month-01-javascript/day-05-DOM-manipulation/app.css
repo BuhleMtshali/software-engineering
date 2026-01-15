@@ -99,15 +99,16 @@ form button{
     border: 3px solid var(--black);
     text-align: center;
     font-weight: bold;
-    background-color: var(--green);
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     color: var(--white);
     transition: all 0.2s ease-in-out;
 }
 
 form button:hover{
     background-color: var(--white);
-    color: var(--green);
-    border: 2px solid var(--green);
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 
 form input:focus{
@@ -120,6 +121,12 @@ form input:focus{
 .checkbox-wrapper * {
   -webkit-tap-highlight-color: transparent;
   outline: none;
+}
+
+.checkbox-wrapper{
+  display: flex;
+  align-items: center;
+  gap: 7px;
 }
 
 .checkbox-wrapper input[type="checkbox"] {
