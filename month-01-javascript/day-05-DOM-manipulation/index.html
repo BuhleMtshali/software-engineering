@@ -23,7 +23,7 @@
        </form>
        <!-- TICKBOX -->
         <div class="checkbox-wrapper">
-            <input id="_checkbox-26" type="checkbox">
+            <input  type="checkbox">
             <label for="_checkbox-26">
             <div class="tick_mark"></div>
             
@@ -32,16 +32,67 @@
         </div>
 
        <!-- TICKBOX -->
-        <div class="checkbox-wrapper">
-            <input id="_checkbox-26" type="checkbox">
-            <label for="_checkbox-26">
-            <div class="tick_mark"></div>
-            
-            </label>
-            Example
-        </div>
+       <!-- From Uiverse.io by AatreyuShau --> 
+        <label class="notebook-checkbox">
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+        <span class="text">
+            <span class="text-content">Lorem Ipsum</span>
+            <svg preserveAspectRatio="none" viewBox="0 0 400 20" class="cut-line">
+            <path d="M0,10 H400"></path>
+            </svg>
+        </span>
+        </label>
+
+        <svg height="0" width="0">
+        <filter id="handDrawnNoise">
+            <feTurbulence
+            result="noise"
+            numOctaves="8"
+            baseFrequency="0.1"
+            type="fractalNoise"
+            ></feTurbulence>
+            <feDisplacementMap
+            yChannelSelector="G"
+            xChannelSelector="R"
+            scale="3"
+            in2="noise"
+            in="SourceGraphic"
+            ></feDisplacementMap>
+        </filter>
+        </svg>
 
        <!-- second tick -->
+        <label class="notebook-checkbox">
+        <input type="checkbox" />
+        <span class="checkmark"></span>
+        <span class="text">
+            <span class="text-content">Lorem Ipsum</span>
+            <svg preserveAspectRatio="none" viewBox="0 0 400 20" class="cut-line">
+            <path d="M0,10 H400"></path>
+            </svg>
+        </span>
+        </label>
+
+        <svg height="0" width="0">
+        <filter id="handDrawnNoise">
+            <feTurbulence
+            result="noise"
+            numOctaves="8"
+            baseFrequency="0.1"
+            type="fractalNoise"
+            ></feTurbulence>
+            <feDisplacementMap
+            yChannelSelector="G"
+            xChannelSelector="R"
+            scale="3"
+            in2="noise"
+            in="SourceGraphic"
+            ></feDisplacementMap>
+        </filter>
+        </svg>
+
+       <!-- end  -->
 
     </div>
 <script src="app.js"></script>
