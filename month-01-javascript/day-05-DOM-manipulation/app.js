@@ -2,6 +2,7 @@
 let formInput = document.querySelector("#search-input");
 let form = document.querySelector("#form");
 
-form.addEventListener("click", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log("form logged")
 })
