@@ -2,14 +2,20 @@
 let formInput = document.querySelector("#search-input");
 let form = document.querySelector("#form");
 let listWrapper = document.querySelector("#list-wrapper");
+let clearBtn = document.querySelector("#delete-btn")
 let list = [];
 
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    list.push(formInput.value);
-    formInput.value = "";
-    addToList(list);
+    if(formInput.value.length > 2){
+        list.push(formInput.value);
+        formInput.value = "";
+        addToList(list);
+    } else{
+        alert("Please enter something first!")
+    }
+    
 });
 
 
@@ -17,7 +23,8 @@ form.addEventListener("submit", (e) => {
 function addToList(array){
     console.log(array)
     let htmlMarkup = '';
-    array.forEach((item) => {
+    if(array.length > 0){
+        array.forEach((item) => {
         htmlMarkup += `
                 <label class="notebook-checkbox">
                     <input type="checkbox" />
@@ -49,6 +56,14 @@ function addToList(array){
                 </svg>
                 `
     })
+    } else{
+        alert("Please Enter items to the list")
+    }
+    
 
     listWrapper.innerHTML = htmlMarkup;
 }
+
+clearBtn.addEventListener("click", () => {
+    listWrapper.innerHTML = ''
+})
