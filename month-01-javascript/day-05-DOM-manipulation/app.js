@@ -18,7 +18,7 @@ function addToList(array){
     console.log(array)
     let htmlMarkup = '';
     array.forEach((item) => {
-        item += `
+        htmlMarkup += `
                 <label class="notebook-checkbox">
                     <input type="checkbox" />
                     <span class="checkmark"></span>
@@ -48,7 +48,6 @@ function addToList(array){
                     </filter>
                 </svg>
                 `
-        htmlMarkup = item;
     })
 
     listWrapper.innerHTML = htmlMarkup;

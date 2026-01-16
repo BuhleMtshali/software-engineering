@@ -219,3 +219,10 @@ form input:focus{
 }
 
 /* END OF TICKBOX */
+
+.list-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
