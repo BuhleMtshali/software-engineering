@@ -23,6 +23,7 @@
     justify-content: center;
     margin: 20px auto;
     flex-direction: column;
+    
 }
 
 .main-heading{
@@ -32,7 +33,7 @@
 
 small{
     color: var(--grey-text);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: var(--grey-font);
     letter-spacing: 0.20em;
     text-transform: uppercase;
