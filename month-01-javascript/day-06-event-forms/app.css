@@ -85,3 +85,9 @@ form ::placeholder{
     flex-direction: column;
 
 }
+
+select{
+    padding: 15px;
+    border: 3px solid black;
+    font-size: 1.2rem;
+}
