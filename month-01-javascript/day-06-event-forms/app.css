@@ -39,3 +39,9 @@ small{
     text-transform: uppercase;
     font-weight: 500;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
