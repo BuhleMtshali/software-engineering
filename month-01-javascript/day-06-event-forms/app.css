@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root{
-    --font: "SN Pro", sans-serif;
+    --main-font: "Playfair Display", serif;
+    --grey-font: "Montserrat", sans-serif;
     --black: black;
     --white: white;
     --grey-text: #6b7280;
@@ -21,8 +22,19 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto;
+    flex-direction: column;
 }
 
 .main-heading{
     font-size: 4rem;
+    font-family: var(--main-font);
+}
+
+small{
+    color: var(--grey-text);
+    font-size: 1.2rem;
+    font-family: var(--grey-font);
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    font-weight: 500;
 }
