@@ -1,19 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 
 :root{
     --font: "SN Pro", sans-serif;
+    --black: black;
+    --white: white;
+    --grey-text: #6b7280;
+    --red-text: red;
 }
 
 *{
     font-family: var(--font);
+    margin: 0;
 }
 
 .container{
-    max-width: 500px;
+    max-width: 600px;
     width: 100%;
     border: 2px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: 20px auto;
+}
+
+.main-heading{
+    font-size: 4rem;
 }
