@@ -109,6 +109,12 @@ select{
     border: 3px solid var(--black);
 }
 
+.rate-btn.active{
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+}
+
 textarea{
     max-width: 100%;
     resize: none;
