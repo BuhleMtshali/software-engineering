@@ -57,65 +57,6 @@ Basically: **frontend logic done right** 😎
 
 ## 📂 Project Structure
 
-# 📝 Day 6: Feedback Form (Events + Forms) 🎯✨
-
-Welcome to **Day 6** of my Full-Stack Software Engineering journey 🚀  
-Today was all about **forms that actually think**, buttons that behave, and JavaScript doing the heavy lifting behind the scenes 🧠⚙️
-
-This project simulates a **real-world feedback form** where users can submit their details, choose a category, rate an experience, and leave feedback — all handled cleanly with vanilla JS 💅
-
----
-
-## 🎯 What This Project Does
-
-✅ Collects user details (name + email)  
-✅ Allows category selection via `<select>`  
-✅ Uses interactive rating buttons (1–5 ⭐)  
-✅ Ensures **only one rating can be selected**  
-✅ Validates all fields before submission  
-✅ Logs clean, structured feedback to the console  
-✅ Resets state after successful submission  
-
-Basically: **frontend logic done right** 😎
-
----
-
-## 🧠 Concepts Practiced
-
-- 📟 DOM Selection & Traversal  
-- 🧩 Event Handling (`click`, `submit`)  
-- 🧼 Form Validation  
-- 🎯 State Management (selected rating)  
-- 🎨 Dynamic Class Toggling  
-- 🧠 Separating UI logic from submission logic  
-
----
-
-## 🖱️ How It Works (User Flow)
-
-1️⃣ User enters full name & email  
-2️⃣ Selects a feedback category  
-3️⃣ Clicks **one** rating button (1–5)  
-4️⃣ Types feedback message  
-5️⃣ Submits the form  
-6️⃣ App validates + logs everything  
-7️⃣ Form resets like nothing happened ✨  
-
----
-
-## 🛠️ Tech Stack
-
-- 🌐 HTML5  
-- 🎨 CSS3 (custom styling + typography)  
-- ⚡ Vanilla JavaScript  
-- ❌ No frameworks  
-- ❌ No libraries  
-- ✅ Just clean fundamentals  
-
----
-
-## 📂 Project Structure
-
 Day-6-Feedback-Form/
 │
 ├── index.html
