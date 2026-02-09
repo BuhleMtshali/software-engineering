@@ -15,3 +15,11 @@ buttons.forEach((button) => {
         console.log("Selected value: ", button.dataset.value)
     })
 })
+
+
+//SUBMITTING THE FORM
+let form = document.querySelector("form")
+form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    console.log("i submitted the form")
+})
