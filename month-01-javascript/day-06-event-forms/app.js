@@ -1,7 +1,8 @@
 //GETIING ALL THE BUTTONS
 const buttons = document.querySelectorAll(".rate-btn");
 buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault()
         //FIRST I NEED TO REMOVE THE ACTIVE CLASS
         buttons.forEach((btn) => {
             btn.classList.remove("active")

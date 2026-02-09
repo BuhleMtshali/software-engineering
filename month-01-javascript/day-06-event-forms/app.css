@@ -92,14 +92,12 @@ select{
     font-size: 1.1rem;
 }
 
-
-
 .buttons-wrapper{
     display: flex;
     justify-content: space-between;
 }
 
-.buttons-wrapper button{
+.buttons-wrapper .rate-btn{
     padding: 20px 35px;
     cursor: pointer;
     font-size: 1.6rem;
