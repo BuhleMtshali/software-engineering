@@ -6,7 +6,8 @@ let tryAgain = "yes";
 
 
 while(tryAgain.toLowerCase() === "yes"){
-    console.log("loop is running")
+    let number1 = parseFloat(prompt("Enter your first number: "))
+    let number2 = parseFloat(prompt("Enter your second number: "))
 
 
     tryAgain = prompt("Wanna run again (yes/no)?").toLowerCase()
