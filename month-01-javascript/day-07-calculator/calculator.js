@@ -8,6 +8,15 @@ let tryAgain = "yes";
 while(tryAgain.toLowerCase() === "yes"){
     let number1 = parseFloat(prompt("Enter your first number: "))
     let number2 = parseFloat(prompt("Enter your second number: "))
+    let operator = prompt("Choose an operator(+, -, /, *): ")
+    let output
+
+    switch(operator){
+        case "+":
+            output = number1 + number2
+            console.log(`${number1} ${operator} ${number2} = ${output}`)
+
+    }
 
 
     tryAgain = prompt("Wanna run again (yes/no)?").toLowerCase()
