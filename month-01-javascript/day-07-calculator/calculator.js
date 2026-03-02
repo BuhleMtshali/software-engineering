@@ -21,6 +21,21 @@ while(tryAgain.toLowerCase() === "yes"){
             output = number1 - number2
             console.log(`${number1} ${operator} ${number2} = ${output}`)
         break;
+
+        case "*":
+            output = number1 * number2
+            console.log(`${number1} ${operator} ${number2} = ${output}`)
+        break;
+
+        case "/":
+            if(number2 === 0){
+                console.log("Cannot divide by 0")
+                break;
+            } else{
+                output = number1 / number2
+                console.log(`${number1} ${operator} ${number2} = ${output}`)
+            }
+        break;
     }
 
 
