@@ -10,4 +10,5 @@ while(tryAgain.toLowerCase() === "yes"){
 
 
     tryAgain = prompt("Wanna run again (yes/no)?").toLowerCase()
+    console.log("====== Thank you for trying my mini calculator======")
 }
