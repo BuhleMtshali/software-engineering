@@ -15,7 +15,12 @@ while(tryAgain.toLowerCase() === "yes"){
         case "+":
             output = number1 + number2
             console.log(`${number1} ${operator} ${number2} = ${output}`)
+        break;
 
+        case "-":
+            output = number1 - number2
+            console.log(`${number1} ${operator} ${number2} = ${output}`)
+        break;
     }
 
 
