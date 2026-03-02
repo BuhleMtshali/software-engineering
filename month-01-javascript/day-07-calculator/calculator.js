@@ -7,8 +7,8 @@ let tryAgain = "yes";
 
 while(tryAgain.toLowerCase() === "yes"){
     let number1 = parseFloat(prompt("Enter your first number: "))
-    let number2 = parseFloat(prompt("Enter your second number: "))
     let operator = prompt("Choose an operator(+, -, /, *): ")
+    let number2 = parseFloat(prompt("Enter your second number: "))
     let output
 
     switch(operator){
