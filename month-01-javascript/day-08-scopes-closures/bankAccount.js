@@ -64,6 +64,8 @@ function mainFunction(){
                 break;
             case "3":
                 let withdraw = parseFloat(prompt("How much do you wanna withdraw(R): "));
+                account.withdraws(withdraw);
+                break;
 
         }
 
