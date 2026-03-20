@@ -14,6 +14,12 @@ function createBankAccount(){
         deposit(amount){
             balance += amount;
             console.log(`You deposited: R${amount} and the Balance is: R${balance}`)
+        },
+
+        //WITHDRAW METHOD & AMOUNT
+        withdraws(amount){
+            balance -= amount;
+            console.log(`You withdrew: R${amount} and the Balance is: R${balance}`)
         }
     }
 }
