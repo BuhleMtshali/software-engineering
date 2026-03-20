@@ -27,8 +27,7 @@ function createBankAccount(){
         },
 
         //METHOD TO VIEW BALANCE
-        viewBalance(amount){
-            balance = amount;
+        viewBalance(){
             console.log(`Your current Balance is: R${amount}`)
         }
     }
@@ -51,6 +50,7 @@ function mainFunction(){
         console.log("1. View Balance 🎮")
         console.log("2. Deposit Money 💵")
         console.log("3. Withdraw Money 💷")
+        console.log("4. Exit ")
         let userInput = prompt("Choose an option: ")
 
         //STARTING THE SWITCH STSTEMENT
@@ -65,6 +65,11 @@ function mainFunction(){
             case "3":
                 let withdraw = parseFloat(prompt("How much do you wanna withdraw(R): "));
                 account.withdraws(withdraw);
+                break;
+
+            case "4":
+                console.log("======= 👾 THANK YOU FOR TRYING MY MINI BANK 🏦 ========")
+                transactAgain = "no";
                 break;
 
         }
