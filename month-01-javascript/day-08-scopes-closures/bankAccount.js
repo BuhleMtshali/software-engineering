@@ -47,7 +47,14 @@ function mainFunction(){
         console.log("1. View Balance 🎮")
         console.log("2. Deposit Money 💵")
         console.log("3. Withdraw Money 💷")
+        let userInput = prompt("Choose an option: ")
 
+        //STARTING THE SWITCH STSTEMENT
+        switch(userInput){
+            case "1":
+                account.viewBalance();
+                break
+        }
 
          //CLOSING THE LOOOP
          transactAgain = prompt("Wanna run again (yes/no): ").toLowerCase()
