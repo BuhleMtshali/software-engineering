@@ -38,4 +38,20 @@ const account = createBankAccount();
 function mainFunction(){
     //GREETING MESSAGE
     console.log("===== 🎲 Welcome to My Mini Bank Transaction App 🐝 ====")
+
+    //STARTING THE MAIN WHILE LOOP
+    let transactAgain = "yes";
+
+    while(transactAgain.toLowerCase() === "yes"){
+        //GETTING WHAT THE USER WANTS TO DO & Options
+        console.log("1. View Balance 🎮")
+        console.log("2. Deposit Money 💵")
+        console.log("3. Withdraw Money 💷")
+
+
+         //CLOSING THE LOOOP
+         transactAgain = prompt("Wanna run again (yes/no): ").toLowerCase()
+         console.log("======= 👾 THANK YOU FOR TRYING MY MINI BANK 🏦 ========")
+    }
+    
 }
