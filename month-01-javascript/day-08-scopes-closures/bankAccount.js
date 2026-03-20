@@ -28,7 +28,7 @@ function createBankAccount(){
 
         //METHOD TO VIEW BALANCE
         viewBalance(){
-            console.log(`Your current Balance is: R${amount}`)
+            console.log(`Your current Balance is: R${balance}`)
         }
     }
 }
