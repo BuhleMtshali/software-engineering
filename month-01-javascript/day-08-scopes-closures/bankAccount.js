@@ -18,8 +18,12 @@ function createBankAccount(){
 
         //WITHDRAW METHOD & AMOUNT
         withdraws(amount){
-            balance -= amount;
-            console.log(`You withdrew: R${amount} and the Balance is: R${balance}`)
+            if(amount > balance){
+                console.log("Balance too low!")
+            } else{
+                balance -= amount;
+                console.log(`You withdrew: R${amount} and the Balance is: R${balance}`)
+            }
         },
 
         //METHOD TO VIEW BALANCE
@@ -54,6 +58,13 @@ function mainFunction(){
             case "1":
                 account.viewBalance();
                 break
+            case "2":
+                let deposit = parseFloat(prompt("How much do wanna deposit(R): "))
+                account.deposit(deposit)
+                break;
+            case "3":
+                let withdraw = parseFloat(prompt("How much do you wanna withdraw(R): "));
+
         }
 
          //CLOSING THE LOOOP
@@ -62,3 +73,5 @@ function mainFunction(){
     }
     
 }
+
+mainFunction()
