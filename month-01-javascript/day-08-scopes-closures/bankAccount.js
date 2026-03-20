@@ -32,3 +32,10 @@ function createBankAccount(){
 
 //CREATING THE INSTANCE
 const account = createBankAccount();
+
+
+//MAIN FUNCTION
+function mainFunction(){
+    //GREETING MESSAGE
+    console.log("===== 🎲 Welcome to My Mini Bank Transaction App 🐝 ====")
+}
