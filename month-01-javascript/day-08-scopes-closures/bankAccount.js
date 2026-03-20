@@ -20,6 +20,12 @@ function createBankAccount(){
         withdraws(amount){
             balance -= amount;
             console.log(`You withdrew: R${amount} and the Balance is: R${balance}`)
+        },
+
+        //METHOD TO VIEW BALANCE
+        viewBalance(amount){
+            balance = amount;
+            console.log(`Your current Balance is: R${amount}`)
         }
     }
 }
