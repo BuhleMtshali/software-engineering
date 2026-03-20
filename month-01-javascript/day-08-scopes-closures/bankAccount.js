@@ -29,3 +29,6 @@ function createBankAccount(){
         }
     }
 }
+
+//CREATING THE INSTANCE
+const account = createBankAccount();
