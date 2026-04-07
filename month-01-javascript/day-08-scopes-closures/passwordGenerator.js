@@ -21,3 +21,8 @@ function createPasswordGenerator(){
         return password;
     }
 }
+
+//USING THE FUNCTIONS
+const secureGenerator = createPasswordGenerator({upper: true, numbers: true, symbols: true})
+const userPassword = secureGenerator(16)
+console.log(userPassword)
