@@ -158,3 +158,105 @@ const userPassword = secureGenerator(16);
 console.log(userPassword);
 
 ```
+
+## 🧠 What I Learned:
+
+- Closures can store configuration (character sets)
+
+- Inner functions can generate dynamic results
+
+- Random logic with Math.random()
+
+
+# 🏦 2. Mini Bank App
+
+## 💡 Description:
+
+- A CLI banking app using closures to protect balance
+
+## ⚙️ Features:
+
+- Deposit money 💵
+
+- Withdraw money 💷
+
+- View balance 🎮
+
+- Loop-based interaction
+
+```
+
+function createBankAccount(){
+    let balance = 0;
+
+    return{
+        deposit(amount){
+            balance += amount;
+            console.log(`You deposited: R${amount} and the Balance is: R${balance}`)
+        },
+
+        withdraws(amount){
+            if(amount > balance){
+                console.log("Balance too low!")
+            } else{
+                balance -= amount;
+                console.log(`You withdrew: R${amount} and the Balance is: R${balance}`)
+            }
+        },
+
+        viewBalance(){
+            console.log(`Your current Balance is: R${balance}`)
+        }
+    }
+}
+
+```
+
+## 🧠 What I Learned:
+
+- Closures keep balance private 🔐
+
+- Only methods can access/modify it
+
+- This is similar to private variables in other languages
+
+## 🔥 Key Takeaways
+
+- Functions = reusable logic 🧠
+
+- Scope = controls access 📦
+
+- Closures = memory + privacy 🔐
+
+### 👉 Closures are powerful because:
+
+- They protect data
+
+- They maintain state
+
+- They mimic private variables
+
+## ⚠️ Mistakes I Fixed
+
+❌ Trying to access variables outside their scope
+
+❌ Forgetting return in functions
+
+❌ Confusing local vs global variables
+
+❌ Not understanding how closures retain values
+
+
+## 🚀 Growth Reflection
+
+- Today I moved from:
+
+    👉 Writing basic functions
+- to
+    👉 Understanding how JavaScript thinks behind the scenes
+
+- This is a major step toward advanced JavaScript 💪
+
+## 📅 Day 8 complete.
+
+- Brain upgraded. JavaScript unlocked another level 🔓🔥
