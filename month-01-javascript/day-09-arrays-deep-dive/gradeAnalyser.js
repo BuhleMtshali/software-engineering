@@ -20,4 +20,11 @@ function addStudent(studentArray){
     }
 
     //NOW BEFORE ADDING THE STUDENTS LETS CHECK IF THEY EXIST
+    let studentExists = grades_students.find(student => student.name === name)
+
+    if(studentExists){
+        console.log("‼️Student Already exists in the list")
+    } else {
+        grades_students.push(student_object)
+    }
 }
