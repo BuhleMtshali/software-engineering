@@ -38,7 +38,7 @@ function addStudent(){
 
 function viewStudents(){
     for(let students of grades_students){
-        console.table(students.studentName)
+        console.log(`${students.studentName} | ${students.studentSubject} | ${students.studentGrade}`)
         
     }
 }
