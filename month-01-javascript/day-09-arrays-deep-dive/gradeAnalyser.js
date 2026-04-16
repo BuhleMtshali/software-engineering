@@ -2,24 +2,28 @@ const prompt = require("prompt-sync")();
 
 console.log('===== 👩🏽‍🎓 MINI STUDENT GRADE ANALYZER🧺 =====')
 
-//this will hold the objects with grade objects
+// ARRAY TO STORE STUDENTS
 let grades_students = [
     {studentName: "buhle", studentSubject: "english", studentGrade: 54, studentPercentage: 78},
     {studentName: "zano", studentSubject: "english", studentGrade: 85, studentPercentage: 89}
 ]
 
-
-//THIS FUNCTION WILL ADD STUDENTS TO THE LIST
+// =======================
+// ADD STUDENT FUNCTION
+// =======================
 function addStudent(){
     let name = prompt("What is the student's name: ").toLowerCase()
     let subject = prompt("What is the subject's name: ").toLowerCase()
     let grade = parseInt(prompt("What is the Student's grade: "))
     let totalGrade = parseInt(prompt("What is the total grade of the subject: "))
 
-    //Percentage for the student
+    if(isNaN(grade) || isNaN(totalGrade) || totalGrade === 0){
+        console.log("🚫 Invalid grade input!");
+        return;
+    }
+
     let percentage = Math.round((grade / totalGrade) * 100);
-    
-    //CREATING THE STUDENT OBJECT
+
     let student_object = {
         studentName: name,
         studentSubject: subject,
@@ -27,56 +31,60 @@ function addStudent(){
         studentPercentage: percentage
     }
 
-    //FINDING THE AVERAGE
-    let sum = 0;
-    let studentsWhole = grades_students.length;
-    for(let grade of grades_students){
-        sum += grade.studentGrade;
-        console.log(studentsWhole)
-    }
-
-    //NOW BEFORE ADDING THE STUDENTS LETS CHECK IF THEY EXIST
     let studentExists = grades_students.find(
-        
         student => student.studentName === name
     )
 
     if(studentExists){
-        console.log("‼️Student Already exists in the list")
+        console.log("‼️ Student already exists in the list");
     } else {
         grades_students.push(student_object)
-        console.log("✅ Student added successfully")
+        console.log("✅ Student added successfully");
     }
-
-
 }
 
+// =======================
+// VIEW STUDENTS
+// =======================
 function viewStudents(){
     if(grades_students.length > 0){
-        for(let students of grades_students){
-            console.log(`${students.studentName} | ${students.studentSubject} | ${students.studentGrade} | ${students.studentPercentage}`)
+        console.log("===== 📋 STUDENT LIST =====");
+        for(let student of grades_students){
+            console.log(`${student.studentName} | ${student.studentSubject} | ${student.studentGrade} | ${student.studentPercentage}%`)
         }
     } else{
-        console.log('There are no stundents logged at the moment¡ß')
+        console.log('🚫 No students found');
     }
 }
 
-
+// =======================
+// MAIN FUNCTION
+// =======================
 function mainFunction(){
-    //STARTING THE WHILE LOOP TO KEEP ADDING THE STUDENTS
-    let addAgain = "yes"
-    while(addAgain.toLowerCase() === "yes"){
-        console.log()
+    let choice = "yes";
 
+    while(choice.toLowerCase() === "yes"){
+        console.log("\n1. Add Student 🎓");
+        console.log("2. View Students 📋");
 
+        let option = prompt("Choose an option: ");
 
-        addAgain = prompt("Do you want to Add Another Student: ").toLowerCase();
+        switch(option){
+            case "1":
+                addStudent();
+                break;
+            case "2":
+                viewStudents();
+                break;
+            default:
+                console.log("🚫 Invalid option");
+        }
+
+        choice = prompt("Do you want to continue? (yes/no): ");
     }
 
-    
+    console.log("👋 Thank you for using the Grade Analyzer!");
 }
 
-//close out message
-console.log("Thank you for checking out the Grade Analyser")
-
-addStudent()
+// RUN APP
+mainFunction();
