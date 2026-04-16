@@ -27,6 +27,12 @@ function addStudent(){
         studentPercentage: percentage
     }
 
+    //FINDING THE AVERAGE
+    let sum;
+    for(let grade of grades_students){
+        console.log(grade)
+    }
+
     //NOW BEFORE ADDING THE STUDENTS LETS CHECK IF THEY EXIST
     let studentExists = grades_students.find(
         
@@ -44,12 +50,9 @@ function addStudent(){
 }
 
 function viewStudents(){
-    let sum = 0;
     if(grades_students.length > 0){
         for(let students of grades_students){
-            sum += students.studentGrade;
-            console.log(sum)
-        //console.log(`${students.studentName} | ${students.studentSubject} | ${students.studentGrade} | ${students.studentPercentage}`)
+            console.log(`${students.studentName} | ${students.studentSubject} | ${students.studentGrade} | ${students.studentPercentage}`)
         }
     } else{
         console.log('There are no stundents logged at the moment¡ß')
