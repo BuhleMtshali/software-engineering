@@ -28,9 +28,11 @@ function addStudent(){
     }
 
     //FINDING THE AVERAGE
-    let sum;
+    let sum = 0;
+    let studentsWhole = grades_students.length;
     for(let grade of grades_students){
-        console.log(grade)
+        sum += grade.studentGrade;
+        console.log(studentsWhole)
     }
 
     //NOW BEFORE ADDING THE STUDENTS LETS CHECK IF THEY EXIST
@@ -77,4 +79,4 @@ function mainFunction(){
 //close out message
 console.log("Thank you for checking out the Grade Analyser")
 
-viewStudents()
+addStudent()
