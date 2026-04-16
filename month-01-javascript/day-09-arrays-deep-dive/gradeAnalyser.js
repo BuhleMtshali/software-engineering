@@ -14,6 +14,10 @@ function addStudent(){
     let name = prompt("What is the student's name: ").toLowerCase()
     let subject = prompt("What is the subject's name: ").toLowerCase()
     let grade = parseInt(prompt("What is the Student's grade: "))
+    let totalGrade = parseInt(prompt("What is the total grade of the subject: "))
+
+    //Percentage for the student
+    let percentage = Math.round((grade / totalGrade) * 100);
     
     //CREATING THE STUDENT OBJECT
     let student_object = {
@@ -37,10 +41,14 @@ function addStudent(){
 }
 
 function viewStudents(){
-    for(let students of grades_students){
+    if(grades_students.length() > 0){
+        for(let students of grades_students){
         console.log(`${students.studentName} | ${students.studentSubject} | ${students.studentGrade}`)
-        
+        }
+    } else{
+        console.log('There are no stundents logged at the moment¡ß')
     }
+    
 }
 
 
